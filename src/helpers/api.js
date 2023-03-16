@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = process.env.PIXLY_API_BASE_URL || "http://localhost:5002";
+const BASE_URL = process.env.PIXLY_API_BASE_URL || "https://davids-pixly-backend.onrender.com";
 
 /** API Class
  *
