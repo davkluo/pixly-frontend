@@ -7,8 +7,7 @@ import PixlyApi from './helpers/api';
 import NavBar from './NavBar';
 import RoutesList from './RoutesList';
 
-const S3_BASE_URL = process.env.AWS_BUCKET_BASE_URL
-  || 'https://davids-aws-bucket.s3.us-west-1.amazonaws.com/';
+import { S3_BASE_URL } from '../config';
 
 const ORIGINALS_FOLDER_PATH = 'pixly/images/originals/';
 const THUMBNAILS_FOLDER_PATH = 'pixly/images/thumbnails/';
