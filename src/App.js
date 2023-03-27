@@ -7,7 +7,7 @@ import PixlyApi from './helpers/api';
 import NavBar from './NavBar';
 import RoutesList from './RoutesList';
 
-import { S3_BASE_URL } from '../config';
+const S3_BASE_URL = process.env.REACT_APP_AWS_BUCKET_BASE_URL;
 
 const ORIGINALS_FOLDER_PATH = 'pixly/images/originals/';
 const THUMBNAILS_FOLDER_PATH = 'pixly/images/thumbnails/';
