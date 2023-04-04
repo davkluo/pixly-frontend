@@ -1,26 +1,20 @@
 .ImageCard {
-    height: 220px;
-    width: 220px;
-    background-color: rgba(208, 217, 225, .75);
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: .75rem;
-    position: relative;
-    padding: 0;
-    box-sizing: border-box;
+    transition: all .25s ease-in-out;
+    border-radius: .5rem;
 }
 
-.ImageCard h2 {
-    position: absolute;
-    bottom: 0;
-    font-size: 1rem;
-    text-transform: uppercase;
-    visibility: hidden;
-    background-color: white;
-    width: 100%;
+.ImageCard img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    aspect-ratio: 1/1;
+    border-radius: .5rem;
 }
 
-.ImageCard:hover h2 {
-    visibility: visible;
+.ImageCard:hover {
+    scale: 1.05;
+    box-shadow: 0 0 1rem .1rem #DBDBDB;
 }

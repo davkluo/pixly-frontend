@@ -75,12 +75,12 @@ function Home({ images, handleSearch }) {
     </Popover>
   );
   return (
-    <>
+    <div className='HomePage'>
       <ImageContainer className='mb-5' images={images} />
       <OverlayTrigger trigger='click' placement='top' overlay={searchPopover}>
         <Button id='search-btn' variant='link'>SEARCH & FILTER</Button>
       </OverlayTrigger>
-    </>
+    </div>
   );
 }
 
