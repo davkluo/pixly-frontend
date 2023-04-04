@@ -4,7 +4,6 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Image } from 'react-bootstrap-icons';
 
 const INITIAL_FORM_DATA = {
   imgFile: null,
@@ -136,7 +135,7 @@ function ImageForm({ upload }) {
                 onChange={handleChange}
               />
             </Form.Group>
-            <Button variant='dark' type='submit'><Image/></Button>
+            <Button variant='dark' type='submit'>UPLOAD</Button>
           </Form>
         </Col>
       </Row>

@@ -27,7 +27,7 @@ function ImageDetail() {
       setImage({ data: image, isLoading: false });
     }
     getAndSetImage();
-  }, []);
+  }, [id]);
   console.log(image.data);
 
   if (image.isLoading) {

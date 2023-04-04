@@ -9,13 +9,9 @@ function ExifData({ exifData }) {
   return (
     <Card className='w-100'>
       <Card.Body>
-        {/* <Card.Title>Image Data</Card.Title> */}
         <Card.Subtitle className="mb-2 text-muted">Image Details</Card.Subtitle>
         {exifData?.device_manufacturer && <Card.Text>
-          Device mfg: {exifData.device_manufacturer}
-        </Card.Text>}
-        {exifData?.device_model && <Card.Text>
-          Device: {exifData.device_model}
+          Device: {exifData.device_manufacturer} {exifData.device_model}
         </Card.Text>}
         {exifData?.exposure && <Card.Text>
           Exposure: 1/{exifData.exposure}
@@ -27,9 +23,19 @@ function ExifData({ exifData }) {
           Focal Length: {exifData.focal_length}mm
         </Card.Text>}
         {exifData?.height_px && <Card.Text>
-          Size: {exifData.height_px}px x {exifData.width_px}px
+          Image Size: {exifData.height_px}px x {exifData.width_px}px
         </Card.Text>}
-        {exifData.location && <Card.Link className='geo' href={`${GOOGLE_MAPS_BASE_URL}${exifData.location},15z`} target="_blank" rel="noopener noreferrer"><GeoAltFill /></Card.Link>}
+        {
+          exifData.location &&
+          <Card.Link
+            className='geo'
+            href={`${GOOGLE_MAPS_BASE_URL}${exifData.location},15z`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GeoAltFill />
+          </Card.Link>
+        }
       </Card.Body>
     </Card>
   );
