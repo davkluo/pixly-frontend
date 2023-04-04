@@ -1,19 +1,27 @@
+import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from 'react-router-dom';
 import { Images, PlusCircleDotted } from 'react-bootstrap-icons';
 import './NavBar.css';
-import { NavbarBrand } from 'react-bootstrap';
 
 function NavBar() {
   return (
-    <Navbar className='NavBar shadow' bg='dark' variant='dark'>
-      <NavbarBrand href="/" className='ms-3 mt-1'>Pixly</NavbarBrand>
-      <Nav className='mx-auto'>
-        <NavLink className='nav-link' to='/'><Images /></NavLink>
-        <NavLink className='nav-link' to='/new'><PlusCircleDotted /></NavLink>
-      </Nav>
-    </Navbar>
+    <div>
+      <Navbar className='nav-top'>
+        <Container>
+          <Navbar.Brand href="/" className='mx-auto'>PIXLY</Navbar.Brand>
+        </Container>
+      </Navbar>
+      <Navbar className='nav-bot fixed-bottom'>
+        <Container>
+          <Nav className='mx-auto'>
+              <Nav.Link className="me-2" as={NavLink} to='/'><Images />GALLERY</Nav.Link>
+              <Nav.Link as={NavLink} to='/new'><PlusCircleDotted />UPLOAD</Nav.Link>
+            </Nav>
+        </Container>
+      </Navbar>
+    </div>
   );
 }
 
