@@ -1,0 +1,53 @@
+.FiltersForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.FiltersForm hr,
+.FiltersForm small,
+.FiltersForm .btn-link,
+.FiltersForm .form-control,
+.FiltersForm .input-group-text {
+    color: #DBDBDB;
+    font-size: .9rem;
+}
+
+.FiltersForm .btn-link {
+    text-decoration: none;
+}
+
+.FiltersForm .input-group-text,
+.FiltersForm .form-control {
+    background-color: rgba(0, 0, 0, .9);
+}
+
+.FiltersForm .input-group-text:nth-child(2) {
+    width: 6.5rem;
+}
+
+.FiltersForm .form-control:disabled {
+    background-color: #67697C;
+    color: #DBDBDB88;
+}
+
+.FiltersForm .btn-link:hover {
+    color: #ff785a;
+}
+
+.FiltersForm input[type="checkbox"]:checked {
+    background-color: #ff785a;
+    border-color: #ff785a;
+}
+
+.FiltersForm input[type=number]::-webkit-inner-spin-button,
+.FiltersForm input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.FiltersForm .form-control:focus {
+    border-color: #ff785a;
+    box-shadow: 0 0 0 0.1rem #ff785a44;
+}
