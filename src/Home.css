@@ -1,0 +1,26 @@
+#search-btn {
+    position: fixed;
+    left: 50%;
+    bottom: 4.5rem;
+    transform: translateX(-50%);
+    z-index: 100;
+    color: #DBDBDB;
+    font-weight: bold;
+    text-shadow: 2px 2px #c2714f;
+    text-decoration: none;
+}
+
+#search-btn:hover {
+    text-shadow: 2px 2px #ff785a;
+}
+
+.popover {
+    background-color: rgba(0, 0, 0, .9);
+    border: none;
+    font-family: 'Kanit', sans-serif;
+    max-width: 30rem;
+}
+
+.popover .popover-arrow::after {
+    border-top-color: rgba(0, 0, 0, .9);
+}

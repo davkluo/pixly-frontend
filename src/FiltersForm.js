@@ -72,6 +72,8 @@ function FiltersForm({ handleSearch }) {
         />
       </Form.Group>
 
+      <hr />
+
       <InputGroup className="mb-3">
         <InputGroup.Checkbox
           name='isFilteringWidth'
@@ -121,8 +123,8 @@ function FiltersForm({ handleSearch }) {
         />
       </InputGroup>
 
-      <Button variant='secondary' type='submit' className="me-2"><Search /></Button>
-      <Button variant='secondary' onClick={clearFilters}><XCircle /></Button>
+      <Button variant='link' type='submit' className="me-2">Apply</Button>
+      <Button variant='link' onClick={clearFilters}>Clear</Button>
     </Form>
   );
 }

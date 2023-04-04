@@ -7,7 +7,7 @@ import './NavBar.css';
 
 function NavBar() {
   return (
-    <div>
+    <>
       <Navbar className='nav-top'>
         <Container>
           <Navbar.Brand href="/" className='mx-auto'>PIXLY</Navbar.Brand>
@@ -21,7 +21,7 @@ function NavBar() {
             </Nav>
         </Container>
       </Navbar>
-    </div>
+    </>
   );
 }
 

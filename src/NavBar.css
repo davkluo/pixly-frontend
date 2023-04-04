@@ -27,3 +27,7 @@
 .navbar .nav-link.active {
     color: #FF785A;
 }
+
+.nav-bot {
+    height: 4rem;
+}
