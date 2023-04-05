@@ -10,6 +10,15 @@ import Col from 'react-bootstrap/Col';
 import { EyeFill } from 'react-bootstrap-icons';
 
 
+/** Detail page for an image
+ *
+ * State:
+ * - image: consists of data - image object
+ *                      isLoading - boolean
+ *
+ * RoutesList -> ImageDetail -> ExifData
+ */
+
 function ImageDetail() {
   const { id } = useParams();
 
@@ -43,6 +52,9 @@ function ImageDetail() {
               <Card.Text>
                 {image.data.caption}
               </Card.Text>
+              {image.data.photographer && <Card.Text>
+                Taken By: {image.data.photographer}
+              </Card.Text>}
               <Card.Text>
                 <EyeFill />  {image.data.views}
               </Card.Text>

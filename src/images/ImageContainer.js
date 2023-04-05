@@ -3,6 +3,15 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+
+/** Image container displaying grid of images
+ *
+ * Props:
+ * - images: array of image objects
+ *
+ * Home -> ImageContainer -> ImageCard
+ */
+
 function ImageContainer({ images }) {
   return (
     <div className='ImageContainer my-3'>

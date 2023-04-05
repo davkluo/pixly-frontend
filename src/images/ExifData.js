@@ -4,7 +4,13 @@ import "./ExifData.css";
 const GOOGLE_MAPS_BASE_URL = "https://www.google.com/maps/@";
 
 
-
+/** Card displaying EXIF data for an image
+ *
+ * Props:
+ * - exifData: Object with image exif data
+ *
+ * ImageDetail -> ExifData
+ */
 function ExifData({ exifData }) {
   return (
     <Card className='w-100'>

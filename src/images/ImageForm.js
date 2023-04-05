@@ -25,7 +25,7 @@ const INITIAL_FORM_DATA = {
  * - formData: Object corresponding to data in the form
  * - isFileChosen: Boolean corresponding to whether a file has been selected
  *
- * RoutesList -> ImageForm
+ * RoutesList -> ImageForm -> MessageList
  */
 
 function ImageForm({ upload }) {

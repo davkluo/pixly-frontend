@@ -5,6 +5,10 @@ import { NavLink } from 'react-router-dom';
 import { Images, PlusCircleDotted } from 'react-bootstrap-icons';
 import './NavBar.css';
 
+/** Nav bar component for Pixly
+ *
+ * App -> NavBar
+ */
 function NavBar() {
   return (
     <>

@@ -25,7 +25,7 @@ const INITIAL_FORM_DATA = {
  * State:
  * - formData: Object corresponding to data in the form
  *
- * RoutesList -> Home
+ * RoutesList -> Home -> { FiltersForm, ImageContainer }
  */
 function Home({ images, handleSearch }) {
   // Form data kept here because FiltersForm does not maintain state when

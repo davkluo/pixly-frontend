@@ -14,11 +14,11 @@ const THUMBNAILS_FOLDER_PATH = 'pixly/images/thumbnails/';
 
 /** App: renders Navbar and RoutesList
  *
- * state:
- * - images - contains data - array of image objects
+ * State:
+ * - images: contains data - array of image objects
  *                     isLoading boolean
  *
- * props: none
+ * App -> { NavBar, RoutesList }
  */
 function App() {
 
