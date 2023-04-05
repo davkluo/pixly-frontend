@@ -10,7 +10,7 @@ function ExifData({ exifData }) {
     <Card className='w-100'>
       <Card.Body>
         <Card.Subtitle className="mb-2 text-muted">Image Details</Card.Subtitle>
-        {exifData?.device_manufacturer && <Card.Text>
+        {exifData?.device_manufacturer && exifData?.device_model && <Card.Text>
           Device: {exifData.device_manufacturer} {exifData.device_model}
         </Card.Text>}
         {exifData?.exposure && <Card.Text>
@@ -22,8 +22,8 @@ function ExifData({ exifData }) {
         {exifData?.focal_length && <Card.Text>
           Focal Length: {exifData.focal_length}mm
         </Card.Text>}
-        {exifData?.height_px && <Card.Text>
-          Image Size: {exifData.height_px}px x {exifData.width_px}px
+        {exifData?.width_px && exifData?.height_px && <Card.Text>
+          Image Size: {exifData.width_px} X {exifData.height_px}
         </Card.Text>}
         {
           exifData.location &&

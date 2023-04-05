@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import MessageList from './MessageList';
 
 const INITIAL_FORM_DATA = {
   imgFile: null,
@@ -11,7 +12,8 @@ const INITIAL_FORM_DATA = {
   caption: "",
   photographer: "",
   filter: '',
-  resize: 100
+  resize: 100,
+  messages: [],
 };
 
 /** Form for uploading a new image
@@ -53,9 +55,15 @@ function ImageForm({ upload }) {
       imageFormData.append(key, formData[key]);
     }
 
-    upload(imageFormData);
+    const upload_status = await upload(imageFormData);
 
-    setFormData(INITIAL_FORM_DATA);
+    setFormData({
+      ...INITIAL_FORM_DATA,
+      messages: [{
+        style: upload_status ? 'success' : 'danger',
+        text: upload_status ? 'Successfully uploaded image!' : 'Failed to upload.',
+      }]
+    });
     const fileInput = document.getElementById('fileInput');
     fileInput.value = '';
   }
@@ -137,6 +145,8 @@ function ImageForm({ upload }) {
             </Form.Group>
             <Button variant='dark' type='submit'>UPLOAD</Button>
           </Form>
+
+          <MessageList messages={formData.messages} />
         </Col>
       </Row>
     </Container>
