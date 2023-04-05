@@ -19,7 +19,6 @@ class PixlyApi {
   /** Makes a GET request to server to get an image */
   static async getImage(id) {
     const response = await axios.get(`${BASE_URL}/api/images/${id}`);
-    console.log("response.data.image", response.data.image);
     return response.data.image;
   }
 

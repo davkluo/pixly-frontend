@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ImageContainer from "./ImageContainer";
+import ImageContainer from "../images/ImageContainer";
 import FiltersForm from './FiltersForm';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover';
@@ -35,7 +35,6 @@ function Home({ images, handleSearch }) {
   /**Fires parent function */
   function handleSubmit(evt) {
     evt.preventDefault();
-    console.log(formData);
     handleSearch(formData);
   }
 

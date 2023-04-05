@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from './Home';
-import ImageDetail from './ImageDetail';
-import ImageForm from './ImageForm';
+import Home from '../homepage/Home';
+import ImageDetail from '../images/ImageDetail';
+import ImageForm from '../images/ImageForm';
 
 function RoutesList({ images, upload, handleSearch }) {
   return (
