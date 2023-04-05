@@ -1,5 +1,5 @@
 import './ImageCard.css';
-import { S3_BASE_URL, THUMBNAILS_FOLDER_PATH } from './App';
+import { S3_BASE_URL, THUMBNAILS_FOLDER_PATH } from '../App';
 import { Link } from 'react-router-dom';
 
 function ImageCard({ image }) {

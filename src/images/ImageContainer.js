@@ -4,7 +4,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 function ImageContainer({ images }) {
-  console.log("images", images);
   return (
     <div className='ImageContainer my-3'>
       <Container>

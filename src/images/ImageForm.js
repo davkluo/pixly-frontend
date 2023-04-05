@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import MessageList from './MessageList';
+import MessageList from '../common/MessageList';
 
 const INITIAL_FORM_DATA = {
   imgFile: null,

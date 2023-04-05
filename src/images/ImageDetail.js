@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import { useParams } from "react-router-dom";
-import PixlyApi from './helpers/api';
-import { S3_BASE_URL, ORIGINALS_FOLDER_PATH } from './App';
+import PixlyApi from '../helpers/api';
+import { S3_BASE_URL, ORIGINALS_FOLDER_PATH } from '../App';
 import ExifData from './ExifData';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -28,7 +28,6 @@ function ImageDetail() {
     }
     getAndSetImage();
   }, [id]);
-  console.log(image.data);
 
   if (image.isLoading) {
     return <h2>Loading... </h2>;

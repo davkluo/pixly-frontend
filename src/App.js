@@ -4,8 +4,8 @@ import { BrowserRouter } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 import PixlyApi from './helpers/api';
-import NavBar from './NavBar';
-import RoutesList from './RoutesList';
+import NavBar from './nav/NavBar';
+import RoutesList from './nav/RoutesList';
 
 const S3_BASE_URL = process.env.REACT_APP_AWS_BUCKET_BASE_URL;
 
