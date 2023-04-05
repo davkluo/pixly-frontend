@@ -1,78 +1,40 @@
-import { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from 'react-bootstrap/Button';
 import InputGroup from 'react-bootstrap/InputGroup';
-import { Search, XCircle } from 'react-bootstrap-icons';
-
-
-const INITIAL_FORM_DATA = {
-  searchTerm: "",
-  isFilteringWidth: false,
-  minWidth: '',
-  maxWidth: '',
-  isFilteringHeight: false,
-  minHeight: '',
-  maxHeight: ''
-};
-
+import './FiltersForm.css';
 
 /** Form for searching by image title or filtering by image properties
  *
  * Prop:
- * - handleSearch
- *
- * State:
- * - formData: Object corresponding to data in the form
+ * - handleSubmit: function to submit form
+ * - handleChange: function to handle form inputs
+ * - handleCheckboxChange: function to handle checkbox
+ * - clearFilters: function to clear filters
+ * - formData: current data to display in form
  *
  * RoutesList -> Home -> FiltersForm
  */
 
-function FiltersForm({ handleSearch }) {
-  const [formData, setFormData] = useState(INITIAL_FORM_DATA);
-
-  /**Fires parent function */
-  function handleSubmit(evt) {
-    evt.preventDefault();
-    console.log(formData);
-    handleSearch(formData);
-  }
-
-  /** Update formData state with input text fields */
-  function handleChange(evt) {
-    const { name, value } = evt.target;
-    setFormData(prevFormData => ({
-      ...prevFormData, [name]: value
-    }));
-  }
-
-  /** Update formData state with checkbox text fields */
-  function handleCheckboxChange(evt) {
-    const { name, checked } = evt.target;
-    setFormData(prevFormData => ({
-      ...prevFormData, [name]: checked
-    }));
-  }
-
-  /** sets formData to initialFormData and calls handleSearch with initialFormData */
-  function clearFilters() {
-    setFormData(INITIAL_FORM_DATA);
-    handleSearch(INITIAL_FORM_DATA);
-  }
+function FiltersForm(
+  { handleSubmit, handleChange, handleCheckboxChange, clearFilters, formData }
+) {
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <Form.Group controlId='searchTerm' className='mb-3'>
+    <Form className='FiltersForm my-2' onSubmit={handleSubmit}>
+      <Form.Group controlId='searchTerm' className='mb-2'>
         <Form.Control
           name='searchTerm'
           type='text'
-          placeholder='Search by Title'
+          placeholder='SEARCH BY TITLE'
           maxLength={50}
           value={formData.searchTerm}
           onChange={handleChange}
         />
       </Form.Group>
 
-      <hr />
+      <hr className='my-2'/>
+
+      <small className='mb-2'>FILTERS</small>
 
       <InputGroup className="mb-3">
         <InputGroup.Checkbox
@@ -80,10 +42,10 @@ function FiltersForm({ handleSearch }) {
           checked={formData.isFilteringWidth}
           onChange={handleCheckboxChange}
         />
-        <InputGroup.Text>Filter Width</InputGroup.Text>
+        <InputGroup.Text>WIDTH (PX)</InputGroup.Text>
         <Form.Control
           type='number'
-          placeholder='Minimum (px)'
+          placeholder='MINIMUM'
           name='minWidth'
           value={formData.minWidth}
           disabled={!formData.isFilteringWidth}
@@ -91,7 +53,7 @@ function FiltersForm({ handleSearch }) {
         />
         <Form.Control
           type='number'
-          placeholder='Maximum (px)'
+          placeholder='MAXIMUM'
           name='maxWidth'
           value={formData.maxWidth}
           disabled={!formData.isFilteringWidth}
@@ -104,10 +66,10 @@ function FiltersForm({ handleSearch }) {
           checked={formData.isFilteringHeight}
           onChange={handleCheckboxChange}
         />
-        <InputGroup.Text>Filter Height</InputGroup.Text>
+        <InputGroup.Text>HEIGHT (PX)</InputGroup.Text>
         <Form.Control
           type='number'
-          placeholder='Minimum (px)'
+          placeholder='MINIMUM'
           name='minHeight'
           value={formData.minHeight}
           disabled={!formData.isFilteringHeight}
@@ -115,7 +77,7 @@ function FiltersForm({ handleSearch }) {
         />
         <Form.Control
           type='number'
-          placeholder='Maximum (px)'
+          placeholder='MAXIMUM'
           name='maxHeight'
           value={formData.maxHeight}
           disabled={!formData.isFilteringHeight}
@@ -123,8 +85,10 @@ function FiltersForm({ handleSearch }) {
         />
       </InputGroup>
 
-      <Button variant='link' type='submit' className="me-2">Apply</Button>
-      <Button variant='link' onClick={clearFilters}>Clear</Button>
+      <div class='btn-group'>
+        <Button className='py-0' variant='link' type='submit'>APPLY</Button>
+        <Button className='py-0' variant='link' onClick={clearFilters}>CLEAR</Button>
+      </div>
     </Form>
   );
 }

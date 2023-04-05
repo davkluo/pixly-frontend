@@ -3,21 +3,20 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-
 function ImageContainer({ images }) {
   console.log("images", images);
   return (
-    <>
+    <div className='ImageContainer my-3'>
       <Container>
         <Row>
           {images.map(image =>
-            <Col xs={6} md={4} lg={3} className='my-3' key={image.file_name}>
+            <Col xs={8} sm={6} md={4} lg={3} className='mx-auto my-3 d-flex justify-content-center' key={image.file_name}>
               <ImageCard image={image} />
             </Col>
           )}
         </Row>
       </Container>
-    </>
+    </div>
   );
 }
 

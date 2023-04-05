@@ -40,8 +40,16 @@ function App() {
   }
 
   async function uploadImage(imageData) {
-    await PixlyApi.uploadImage(imageData);
-    getAndSetImages();
+    let image;
+
+    try {
+      image = await PixlyApi.uploadImage(imageData);
+      getAndSetImages();
+    } catch (err) {
+      console.error(err);
+    }
+
+    return image !== undefined;
   }
 
   if (images.isLoading) {

@@ -15,6 +15,10 @@
     font-size: 2.5rem;
 }
 
+.navbar-brand.active {
+    color:#DBDBDB
+}
+
 .nav-link {
     font-size: 1.25rem;
     display: flex;
@@ -30,4 +34,8 @@
 
 .nav-bot {
     height: 4rem;
+}
+
+.nav-top {
+    height: 5rem;
 }
