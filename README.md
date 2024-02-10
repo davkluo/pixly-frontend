@@ -1,9 +1,10 @@
 # Pixly Frontend
+
 Photo sharing and gallery app with EXIF data extraction. Users can upload images, change images to black and white, resize images, extract EXIF data, and filter images.
 
 The accompanying backend can be found [here](https://github.com/davkluo/pixly-backend).
 
-[Live Demo Link](http://davids-pixly.surge.sh)
+[Live Demo Link](https://davids-pixly.netlify.app)
 
 ## Table of Contents
 
@@ -62,6 +63,7 @@ npm start
 Visit `http://localhost:3000` to view the app
 
 ## Future Improvements
+
 - Write tests
 - Add image tagging feature
 - Add image filtering options for more EXIF categories
