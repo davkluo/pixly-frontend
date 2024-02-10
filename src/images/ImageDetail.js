@@ -8,6 +8,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { EyeFill } from 'react-bootstrap-icons';
+import Loader from '../common/Loader';
 
 
 /** Detail page for an image
@@ -39,7 +40,7 @@ function ImageDetail() {
   }, [id]);
 
   if (image.isLoading) {
-    return <h2>Loading... </h2>;
+    return <Loader />;
   }
   return (
     <Container>

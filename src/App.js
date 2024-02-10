@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import PixlyApi from './helpers/api';
 import NavBar from './nav/NavBar';
 import RoutesList from './nav/RoutesList';
+import Loader from './common/Loader';
 
 const S3_BASE_URL = process.env.REACT_APP_AWS_BUCKET_BASE_URL;
 
@@ -53,7 +54,7 @@ function App() {
   }
 
   if (images.isLoading) {
-    return <h2>Loading...</h2>;
+    return <Loader />;
   }
   return (
     <div className="App">
