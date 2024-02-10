@@ -10,6 +10,7 @@ The accompanying backend can be found [here](https://github.com/davkluo/pixly-ba
 
 - [Motivation](#motivation)
 - [Tech Stack](#tech-stack)
+- [Screenshots](#screenshots)
 - [Setup](#setup)
 - [Running the App](#running-the-app)
 - [Viewing the App](#viewing-the-app)
@@ -20,11 +21,19 @@ The accompanying backend can be found [here](https://github.com/davkluo/pixly-ba
 - Create a full-stack application where images can be uploaded and viewed
 - Extract and display EXIF data from images
 - Make simple edits to images prior to uploading
-- Utilize Amazon S3 to store files
+- Learn to utilize Amazon S3 to store files
 
 ## Tech Stack
 
-Built with React
+Built with React and Bootstrap
+
+## Screenshots
+
+<img width="1432" alt="Screen Shot 2023-04-05 at 11 47 03 AM" src="https://user-images.githubusercontent.com/108588437/230176822-c15ac698-58a0-4436-bafa-333262d3366d.png">
+
+<img width="1434" alt="Screen Shot 2023-04-05 at 11 49 22 AM" src="https://user-images.githubusercontent.com/108588437/230176860-5e86c1c9-dd89-4343-bb41-566314fb302a.png">
+
+<img width="1434" alt="Screen Shot 2023-04-05 at 11 50 04 AM" src="https://user-images.githubusercontent.com/108588437/230176887-8821b22e-1e80-43d7-93c6-83ed3f765235.png">
 
 ## Setup
 
@@ -47,7 +56,7 @@ npm install
 
 ```bash
 cp .env.example .env
-# open .env and modify the secret key environment variable
+# open .env and modify the environment variables
 ```
 
 You will need to create an AWS bucket with public folder locations /pixly/images/originals and /pixly/images/thumbnails
