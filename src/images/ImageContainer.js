@@ -18,7 +18,7 @@ function ImageContainer({ images }) {
       <Container>
         <Row>
           {images.map(image =>
-            <Col xs={8} sm={6} md={4} lg={3} className='mx-auto my-3 d-flex justify-content-center' key={image.file_name}>
+            <Col xs={8} sm={4} md={3} lg={2} className='mx-auto my-3 d-flex justify-content-center' key={image.file_name}>
               <ImageCard image={image} />
             </Col>
           )}
